@@ -320,7 +320,7 @@ function togH(){
 function ansQ(i,btn){
   if(done)return;done=true;answers[cur]=i;
   const q=qs[cur];
-  document.querySelectorAll('.abtn').forEach(b=>b.disabled=true);
+  document.querySelectorAll('.abtn').forEach(b=>{b.disabled=true;b.classList.remove('hint');});
   document.querySelectorAll('.abtn')[q.correctIndex].classList.add('ok');
   if(i===q.correctIndex){score++;}
   else{btn.classList.add('er');errs.push({q:q.text,yr:q.options[i],cr:q.options[q.correctIndex]});wrongQs.push(q);}
