@@ -313,10 +313,8 @@ function togH(){
   const opening=ht.style.display!=='block';
   ht.style.display=opening?'block':'none';
   if(opening&&!done){
-    setTimeout(()=>{
-      const btns=document.querySelectorAll('.abtn');
-      if(btns[qs[cur].correctIndex])btns[qs[cur].correctIndex].classList.add('hint');
-    },1000);
+    const btns=document.querySelectorAll('.abtn');
+    if(btns[qs[cur].correctIndex])btns[qs[cur].correctIndex].classList.add('hint');
   }
 }
 
